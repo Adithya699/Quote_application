@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Quote</title>
+</head>
+<body>
+    <h1>Add a New Quote</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="text">Quote:</label>
+        <textarea id="text" name="text" required></textarea><br>
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required><br>
+        <button type="submit">Add Quote</button>
+    </form>
+    <a href="{% url 'index' %}">Back to Quotes</a>
+</body>
+</html>

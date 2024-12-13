@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quotes</title>
+</head>
+<body>
+    <h1>Quote of the Day</h1>
+    <ul>
+        {% for quote in quotes %}
+        <li>"{{ quote.text }}" - {{ quote.author }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_quote' %}">Add a Quote</a>
+</body>
+</html>
